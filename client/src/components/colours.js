@@ -1,0 +1,264 @@
+// Possibility of two different Key-Value Store, allows for dark-bg & light-bg
+
+export const colours = [
+    {
+     name: 'Deep Sea',
+     slug: 'deep-sea',
+     hex: '#2B547E',
+     keywords: 'blue cream white contrast layout'
+    },
+    {
+     name: 'Almond Beige',
+     slug: 'almondbeige',
+     hex: '#D2B48C',
+     keywords: 'beige almond beige brown cream'
+    },
+    {
+     name: 'Wasabi Avo',
+     slug: 'wasabi-avo',
+     hex: '#B6C49D',
+     keywords: 'beige neutral brown'
+    },
+    {
+     name: 'Acid Green',
+     slug: 'acid-green',
+     hex: '#B7C828',
+     keywords: 'beige neutral brown'
+    },
+    {
+     name: 'Astro Grey',
+     slug: 'astro-grey',
+     hex: '#6E7C89',
+     keywords: 'blue cream white contrast layout'
+    },
+    {
+     name: 'Black Emerald',
+     slug: 'black-emerald',
+     hex: '#122220',
+     keywords: 'beige almond beige brown cream'
+    },
+    {
+     name: 'Bushveld',
+     slug: 'bushveld',
+     hex: '#C3BAA7',
+     keywords: 'beige neutral brown'
+    },
+    {
+     name: 'Butter Yellow',
+     slug: 'butter-yellow',
+     hex: '#FFEDA8',
+     keywords: 'blue cream white contrast layout'
+    },
+    {
+     name: 'Cherry Crush',
+     slug: 'cherry-crush',
+     hex: '#BC2C3D',
+     keywords: 'beige almond beige brown cream'
+    },
+    {
+     name: 'Chocolate Kiss',
+     slug: 'chocolate-kiss',
+     hex: '#2C131B',
+     keywords: 'beige neutral brown'
+    },
+    {
+     name: 'Craft Mine',
+     slug: 'craft-mine',
+     hex: '#383838',
+     keywords: 'blue cream white contrast layout'
+    },
+    {
+     name: 'Diablo Inferno',
+     slug: 'diablo-inferno',
+     hex: '#4E0000',
+     keywords: 'beige almond beige brown cream'
+    },
+    {
+     name: 'Fishermans Wave',
+     slug: 'fishermans-wave',
+     hex: '#92A4AC',
+     keywords: 'beige neutral brown'
+    },
+    {
+     name: 'Harbour Mist',
+     slug: 'harbour-mist',
+     hex: '#DCE3E4',
+     keywords: 'blue cream white contrast layout'
+    },
+    {
+     name: 'Honey Ginger',
+     slug: 'honey-ginger',
+     hex: '#D87818',
+     keywords: 'beige almond beige brown cream'
+    },
+    {
+     name: 'Jamie Oliver',
+     slug: 'jamie-oliver',
+     hex: '#5D5C19',
+     keywords: 'beige neutral brown'
+    },
+    {
+     name: 'Soft Fresco',
+     slug: 'soft-fresco',
+     hex: '#BFD5C9',
+     keywords: 'beige almond beige brown cream'
+    },
+    {
+     name: 'Lavendar Calming',
+     slug: 'lavendar-calming',
+     hex: '#967BB6',
+     keywords: 'blue cream white contrast layout'
+    },
+    {
+     name: 'Light Almond',
+     slug: 'light-almond',
+     hex: '#EFDECD',
+     keywords: 'beige almond beige brown cream'
+    },
+    {
+     name: 'Mantis Green',
+     slug: 'mantis-green',
+     hex: '#4E6813',
+     keywords: 'beige neutral brown'
+    },
+    {
+     name: 'Maroon Flip',
+     slug: 'maroon-flip',
+     hex: '#552549',
+     keywords: 'blue cream white contrast layout'
+    },
+    {
+     name: 'Mocha Mousse',
+     slug: 'mocha-mousse',
+     hex: '#A47864',
+     keywords: 'beige almond beige brown cream'
+    },
+    {
+     name: 'Mystic Navy',
+     slug: 'mystic-navy',
+     hex: '#13273F',
+     keywords: 'beige neutral brown'
+    },
+    {
+     name: 'Nightfall',
+     slug: 'nightfall',
+     hex: '#455559',
+     keywords: 'blue cream white contrast layout'
+    },
+    {
+     name: 'Noah Blue',
+     slug: 'noah-blue',
+     hex: '#183941',
+     keywords: 'beige almond beige brown cream'
+    },
+    {
+     name: 'Oxford Blue',
+     slug: 'oxford-blue',
+     hex: '#002147',
+     keywords: 'beige neutral brown'
+    },
+    {
+     name: 'Palm Tree',
+     slug: 'palm-tree',
+     hex: '#30422E',
+     keywords: 'blue cream white contrast layout'
+    },
+    {
+     name: 'Pine Frost',
+     slug: 'pine-frost',
+     hex: '#C6CEBE',
+     keywords: 'beige almond beige brown cream'
+    },
+    {
+     name: 'Raspberry Love',
+     slug: 'raspberry-love',
+     hex: '#9E2256',
+     keywords: 'beige almond beige brown cream'
+    },
+    {
+     name: 'Sea Edge',
+     slug: 'sea-edge',
+     hex: '#81A69F',
+     keywords: 'beige neutral brown'
+    },
+    {
+     name: 'Silver Green',
+     slug: 'silver-green',
+     hex: '#C7C9C7',
+     keywords: 'blue cream white contrast layout'
+    },
+    {
+     name: 'Soft Mint',
+     slug: 'soft-mint',
+     hex: '#B2E0D6',
+     keywords: 'beige almond beige brown cream'
+    },
+    {
+     name: 'Almond Beige',
+     slug: 'almondbeige',
+     hex: '#D2B48C',
+     keywords: 'beige almond beige brown cream'
+    },
+    {
+     name: 'Sunflower White',
+     slug: 'sunflower-white',
+     hex: '#E8E3CC',
+     keywords: 'beige neutral brown'
+    },
+    {
+     name: 'Teddy Bear',
+     slug: 'teddy-bear',
+     hex: '#523D2D',
+     keywords: 'blue cream white contrast layout'
+    },
+    {
+     name: 'Turtle Blue',
+     slug: 'turtle-blue',
+     hex: '#0AA8BD',
+     keywords: 'beige almond beige brown cream'
+    },
+    {
+     name: 'Almond Latte',
+     slug: 'almond-latte',
+     hex: '#D3C0AC',
+     keywords: 'blue cream white contrast layout'
+    },
+    {
+     name: 'Wimbledon Green',
+     slug: 'wimbledon-green',
+     hex: '#008566',
+     keywords: 'blue cream white contrast layout'
+    },
+    {
+     name: 'Wolfs Bane',
+     slug: 'wolfs-bane',
+     hex: '#3C303E',
+     keywords: 'beige almond beige brown cream'
+    },
+    {
+     name: 'Pastel Indigo',
+     slug: 'pastel-indigo',
+     hex: '#B0A6DF',
+     keywords: 'beige almond beige brown cream'
+    },
+    {
+     name: 'Majorelle Blue',
+     slug: 'majorelle-blue',
+     hex: '#6A63DD',
+     keywords: 'blue purple majorelle'
+    },
+    {
+     name: 'Cyan Turquoise',
+     slug: 'cyn-turquoise',
+     hex: '#35D2E1',
+     keywords: 'blue cyan turquoise'
+    },
+    {
+     name: 'Nürburgring Green',
+     slug: 'nrburgring-green',
+     hex: '#0EB882',
+     keywords: 'green nurburgring mint'
+    },
+];
+
+export default colours;

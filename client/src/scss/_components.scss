@@ -1,0 +1,158 @@
+//  cards, banners, things like that, for consistency
+
+body{
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p{
+    padding: 0;
+    margin: 0;
+}
+
+// Colour Page -----------------------------------
+
+.artwork{
+    // background-color: var(--bg-color, #455559);
+    width: 100%;
+    height: 100vh; 
+    position: relative;
+}
+
+.artwork-flex{
+    position: absolute;
+    bottom: 95px;
+    right: 95px;
+    padding: 25px;
+}
+
+.artwork-text{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    // color: #252925;
+    text-shadow: 0 0 rgba(255, 255, 255, 0.4);
+}
+
+.artwork-flex .dark-bg {
+    mix-blend-mode: color-dodge;
+    background: linear-gradient(45deg, #393939, #393939);
+    color: transparent;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 rgba(255, 255, 255, 0.4);
+}
+
+.artwork-flex .light-bg {
+    mix-blend-mode: overlay;
+    background: linear-gradient(45deg, #323232, #323232);
+    color: transparent;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0px 0px rgba(50, 50, 50, 0.9);
+}
+
+// New Colour Page -----------------------------------
+
+form {
+  max-width: 600px;
+//   margin: 2rem auto;
+  padding: 2rem 4rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 1rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+
+  label {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.2rem;
+    padding: 25px 0px 5px 0px;
+    color: #ffffffcc;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  input {
+    padding: 0.75rem 3rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.75rem;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    color: #fff;
+    outline: none;
+    transition: all 0.3s ease;
+
+    &:focus {
+      background: rgba(255, 255, 255, 0.25);
+      box-shadow: 0 0 2px 1px #48373744;
+    }
+  }
+
+  button {
+    padding: 0.75rem 1.5rem;
+    margin-top: 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.75rem;
+    background: linear-gradient(to top, #9333ea, #4f46e5);
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+
+    &:hover {
+        background: linear-gradient(to top, #b06fed, #6863c6);
+    }
+  }
+}
+
+.new-colour-hexa{
+    font-size: 7em;
+    line-height: 1;
+    font-weight: 700;
+    opacity: 90%;
+    text-shadow: 2px 2px 15px rgba(18, 18, 18, 0.8),
+                -2px -2px 15px rgba(255, 255, 255, 0.3);   
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 100px;
+}
+
+.explore{
+    font-weight: 200;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.4);
+    display: inline-block; /* important for transform to behave as expected */
+    will-change: transform;
+
+        &:hover {
+        transform: scale(1.05);
+        opacity: 100%;
+        cursor: pointer;
+        text-shadow: 2px 2px 15px rgba(0, 0, 0, 4);
+        font-weight: 400;
+    }
+}
+
+.home-from-add-colour{
+    text-decoration: none;
+}
+
+.next-to{
+    display: flex;
+}
+
+.hexa-font{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding-top: 17%;
+}
