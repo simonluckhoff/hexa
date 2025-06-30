@@ -52,7 +52,6 @@ def add_colour():
     }
     
     # dynamically grabs path for the file here, mega helpful. 
-    # But for what? 
     current_dir = os.path.dirname(os.path.abspath(__file__))
     json_file = os.path.join(current_dir, '..', '..', 'first_react', 'client', 'src', 'components', 'colours.json')
     json_file = os.path.normpath(json_file)
