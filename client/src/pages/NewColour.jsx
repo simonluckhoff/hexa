@@ -1,29 +1,32 @@
 import React, { useState } from 'react';
 import Carousel from '../components/Carousel'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const AddColourForm = () => {
   const [colour_name, setName] = useState('');
   const [hex_code, setHex] = useState('');
   const [colour_keywords, setKeyword] = useState('');
   const [response, setResponse] = useState(null);
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     const res = await fetch('/api/colour', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ 
         'name': colour_name,
         'hex': hex_code,
-        'keywords': colour_keywords }),
+        'keywords': colour_keywords 
+      }),
     });
 
     const data = await res.json();
     setResponse(data.message);
+
+    const slug = colour_name.trim().toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9\-]/g, '');
+    navigate(`/Colour/${slug}`);
   };
 
   const slides = [

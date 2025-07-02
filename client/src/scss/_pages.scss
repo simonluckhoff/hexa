@@ -203,7 +203,8 @@
 // Contents Page ---------------------
 
 .index-of-colours{
-    // background: radial-gradient(circle, #f0f0f0, #a7a6a6);
+    background: radial-gradient(circle, #1a1a1a, #0d0d0d);
+    // background: radial-gradient(circle, #2c2f36, #1e1e1e);
     // background: radial-gradient(circle, #e8fffa, #aaded3);
     height: 100vh;
     // padding: 30px;
@@ -220,7 +221,10 @@
 
 .colours a {
     text-decoration: none;
-    color: #1d1d1d;
+    // font-size: 1rem;
+        font-size: 1.1em;
+    font-weight: 400;
+    color: #e6e6e6;
     opacity: 50%;
     text-decoration: none;
     padding: 10px 20px;
@@ -231,15 +235,13 @@
     flex: 0 1 auto;
     text-align: center;
     min-width: 100px;
-    font-weight: 500;
     &:hover {
-        // transform: scale(1.05); 
-            transform: scale(1.05);
-            opacity: 100%;
-            cursor: pointer;
-            // text-shadow: 2px 2px 7px rgb(182, 182, 182);
-            // text-shadow: 2px 2px 7px rgba(0, 0, 0, 3);
-            text-shadow: 0px 0px 10px rgba(226, 226, 226, 3);
+        transform: scale(1.05);
+        font-weight: 600;
+        color: #f1f1f1;
+        opacity: 100%;
+        cursor: pointer;
+        text-shadow: 2px 2px 7px rgb(29, 29, 29);
     }
 }
 
@@ -283,73 +285,3 @@
   z-index: 1000;
   @import "~bootstrap/scss/bootstrap"; // or just allow inherited styles
 }
-
-// .index-of-colours {
-//   font-family: 'Inter', sans-serif;
-//   padding: 2rem;
-//   backdrop-filter: blur(12px);
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-
-//   .bootstrap-scope {
-//     margin-bottom: 2rem;
-//     width: 100%;
-//     max-width: 600px;
-
-//     .navbar {
-//       background: rgba(255, 255, 255, 0.05);
-//       border-radius: 12px;
-//       padding: 1rem 1.5rem;
-//       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-//       backdrop-filter: blur(8px);
-//     }
-
-//     input[type="text"] {
-//       width: 100%;
-//       padding: 0.75rem 1rem;
-//       border: none;
-//       border-radius: 8px;
-//       background: rgba(255, 255, 255, 0.15);
-//       color: white;
-//       font-size: 1rem;
-//       outline: none;
-
-//       &:focus {
-//         background: rgba(255, 255, 255, 0.25);
-//         box-shadow: 0 0 0 2px #ffffff55;
-//       }
-//     }
-//   }
-
-//   .colours {
-//     display: flex;
-//     flex-wrap: wrap;
-//     justify-content: center;
-//     gap: 1.2rem;
-
-//     a {
-//       padding: 1rem 1.5rem;
-//       background: rgba(255, 255, 255, 0.1);
-//       border-radius: 10px;
-//       color: white;
-//       text-decoration: none;
-//       font-weight: 500;
-//       transition: all 0.3s ease;
-//       backdrop-filter: blur(6px);
-//       border: 1px solid rgba(255, 255, 255, 0.2);
-
-//       &:hover {
-//         transform: translateY(-4px);
-//         background: rgba(255, 255, 255, 0.2);
-//         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-//       }
-//     }
-//   }
-
-//   p {
-//     color: #ccc;
-//     font-size: 1.2rem;
-//     margin-top: 2rem;
-//   }
-// }

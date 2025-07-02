@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Home from './pages/home.jsx';
 import Contents from './pages/contents.jsx';
 import ColourPage from './pages/ColourPage.jsx';
@@ -10,6 +10,8 @@ function App() {
   return (
     <Router>
       <Routes>
+        {/* this makes /Hexa the default home page */}
+        <Route path="/" element={<Navigate to="/Hexa" replace />} />
         <Route path="/Hexa" element={<Home/>} />
         <Route path="/Index" element={<Contents/>} />
         <Route path="/Colour/:slug" element={<ColourPage/>} />

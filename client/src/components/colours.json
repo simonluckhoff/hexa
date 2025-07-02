@@ -576,6 +576,26 @@
         "silver",
         "bullet"
       ]
+    },
+    {
+      "name": "Cherry Blush",
+      "slug": "cherry-blush",
+      "hex": "#BC2C3D",
+      "keywords": [
+        "cherry",
+        "blush",
+        "red"
+      ]
+    },
+    {
+      "name": "Roseberry Chocco",
+      "slug": "roseberry-chocco",
+      "hex": "#5C343C",
+      "keywords": [
+        "roseberry",
+        "chocco",
+        "red"
+      ]
     }
   ]
 }

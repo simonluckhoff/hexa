@@ -34,10 +34,6 @@ slug is URL-friendly identifier
 
 
 *** To-Do: ***
-- Using python to save to colours.js
-
-- Instead of input(), must use POST request. 
-- And use a form in the jsx to get info. 
 
 
 
@@ -48,9 +44,6 @@ slug is URL-friendly identifier
 *** Errors to Fix ***
 - when inserting HEX, it must check for # or no hash. 
 - if you enter more or less than three keywords?
-- placement for add your own hex. 
-- styling of contents page. 
-- background of page should change to the hex colour, when adding new colour. 
 - on submit, it must take you to that colourpage.
 
 
@@ -62,3 +55,28 @@ call it then - <MyComponent />
 
 const userName (camelCase)
 var userName (camelCase)
+
+
+
+
+
+
+
+*** How to setup Git Repo: *** 
+1. git init
+2. git add .
+3. git commit -m "first commit"
+4. Go create a repo - copy the link
+5. git remote add origin {url}
+6. git branch -M main
+7. git push -u origin main
+8. Done
+
+6: git branch -M main
+   - renames current branch to main. 
+   - -M stands for "move/rename forcibly"
+7: git push -u origin main
+   - tells git: push local "main" branch to remote origin, and remember this connection so I dont have to specify it every time. 
+
+
+   
