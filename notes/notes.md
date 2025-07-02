@@ -1,6 +1,17 @@
+*** To-Do: ***
+1. Fokken Navbar, my word. 
+2. Go through the NewColour and understand the flow. 
+3. Be able to edit... that should be next. 
+
+
+
 
 - python3 server.py
 - npm start
+
+
+
+
 
 
 
@@ -33,19 +44,11 @@ slug is URL-friendly identifier
 
 
 
-*** To-Do: ***
 
 
 
 *** Colour Ideas: ***
 - Dell Grey
-
-
-*** Errors to Fix ***
-- when inserting HEX, it must check for # or no hash. 
-- if you enter more or less than three keywords?
-- on submit, it must take you to that colourpage.
-
 
 
 *** Naming Conventions: ***

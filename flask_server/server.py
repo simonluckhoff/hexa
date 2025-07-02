@@ -13,20 +13,6 @@ def to_slug(name):
     slug = re.sub(r'[^a-z0-9\-]', '', slug)
     return slug
 
-# def name_of_colour_validation():
-#     if name > 2 words
-#         return ("only 2 words are allowed")
-
-# def hex_code_validation():
-#     if hex != # in beginning
-#         add # to beginning
-
-# def keywords_validation():
-#     if keywords < 3 words
-#         return("please provide a minimum of 3 keywords associated to your colour")
-#     if keywords have , between words
-#         remove the commas and only have a single space between words
-
 @app.route('/api/colour', methods=['POST'])
 def add_colour():
     data = request.json

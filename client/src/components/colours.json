@@ -596,6 +596,14 @@
         "chocco",
         "red"
       ]
+    },
+    {
+      "name": "Jack Black",
+      "slug": "jack-black",
+      "hex": "#45A",
+      "keywords": [
+        "urmom"
+      ]
     }
   ]
 }
