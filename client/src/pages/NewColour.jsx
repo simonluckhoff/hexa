@@ -19,6 +19,7 @@ const AddColourForm = () => {
     return words.slice(0, 2).join(' ');
   }
 
+  // what's klapping here? 
   return words
     .map(
       word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
@@ -28,6 +29,7 @@ const AddColourForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    // prints the value of those things in console, helps to debug
       console.log('SUBMIT', { colour_name, hex_code, colour_keywords });
 
     if (!colour_name || !hex_code || !colour_keywords) {
@@ -35,7 +37,8 @@ const AddColourForm = () => {
       return
     }
     setError('');
-
+  
+    // what's klapping here? Loading it in? 
     const res = await fetch('/api/colour', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
