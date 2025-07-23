@@ -3,15 +3,37 @@ from flask_cors import CORS
 import os
 import re
 import json
+from werkzeug.security import check_password_hash
+import jwt,datetime
 
 app = Flask(__name__)
 CORS(app)  # allow React to talk to Flask
+app.config['SECRET_KEY'] = 'your-secret-key'
 
 def to_slug(name):
     slug = name.strip().lower()
     slug = re.sub(r'\s+', '-', slug)
     slug = re.sub(r'[^a-z0-9\-]', '', slug)
     return slug
+
+# logic for authentication
+@app.route('/api/login', methods=['POST'])
+def login():
+    data = request.json
+    email = data.get('email')
+    password = data.get('password')
+
+    user = get_user_by_email(email) # my db logic
+
+    if user and check_password_hash(user['password'], password):
+        token = jwt.encode({
+            'user_id':user['id'],
+            'exp': datetime.datetime.utcnow() + datetime.timedelta(hours=1)
+        }, app.config['SECRET_KEY'], algorithm='HS256')
+
+        return jsonify({'token': token})
+    return jsonify({'message': 'Invalid credentials'}), 401
+
 
 @app.route('/api/colour', methods=['POST'])
 def add_colour():
@@ -58,7 +80,6 @@ def add_colour():
         return jsonify({'message': 'Colour added and saved!'}), 200
     except Exception as e:
         return jsonify({'message': f'Error: {str(e)}'}), 500
-
 
 if __name__ == '__main__':
     app.run(debug=True)
