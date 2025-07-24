@@ -1,10 +1,9 @@
 import { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import Search from '../components/Search'
-// import colours from '../components/colours'
 import colours from '../components/colours.json'
 
-function Contents() {
+function Index() {
     // query is the inital state and setQuery is the changes affected to it. 
     const [query, setQuery] = useState("");
     const [hoveredColour, setHoveredColour] = useState(null);
@@ -76,5 +75,5 @@ function Contents() {
     );
 }
 
-export default Contents;
+export default Index;
 

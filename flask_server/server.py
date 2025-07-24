@@ -34,7 +34,7 @@ def login():
     user = get_user_by_email(email)
     # searching json for an email specific person
     # return dictionary or object
-    # return none if email dont exist
+    # error handle if no email
 
     if user and check_password_hash(user['password'], password):
         token = jwt.encode({

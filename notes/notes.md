@@ -10,6 +10,8 @@
 - npm start
 
 
+=== Trying to get Authentication working ===
+Default is hexa page, need to log in to be able to do anything else. 
 
 
 
@@ -32,11 +34,6 @@
 
 
 
-slug is URL-friendly identifier 
-- "Deep Sea" -> "deep-sea"
-
-
-
 <link rel="icon" href="%PUBLIC_URL%/logo.png" />
   - This blew my mind. That PUBLIC URL basically dynamically creates the URL as you create your pages. 
 
@@ -55,9 +52,6 @@ slug is URL-friendly identifier
 
 function MyComponent() { ... }
 call it then - <MyComponent />
-
-const userName (camelCase)
-var userName (camelCase)
 
 
 
