@@ -12,7 +12,7 @@
 
 === Trying to get Authentication working ===
 Default is hexa page, need to log in to be able to do anything else. 
-
+users.json probably needs to be stored in the backend hmmm. 
 
 
 

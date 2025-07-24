@@ -1,17 +1,43 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, abort
 from flask_cors import CORS
+from flask_bcrypt import Bcrypt
+from authentication import db, User
+from config import ApplicationConfig
 import os
 import re
 import json
-from werkzeug.security import check_password_hash
-import jwt,datetime
-from get_user import get_user_by_email
-
 
 
 app = Flask(__name__)
-CORS(app)  # allow React to talk to Flask
-app.config['SECRET_KEY'] = 'your-secret-key'
+app.config.from_object(ApplicationConfig)
+CORS(app) 
+# app.config['SECRET_KEY'] = 'your-secret-key'
+
+
+bcrypt = Bcrypt(app)
+db.init_app(app)
+
+with app.app_context():
+    db.create_all()
+
+@app.route("/register", methods=["POST"])
+def register_user():
+    email = request.json["email"]
+    password= request.json["password"]
+
+    user_exists = User.query.filter_by(email=email).first() is not None
+
+    if user_exists:
+        abort(409)
+    hashed_password = bcrypt.generate_password_hash(password)
+    new_user = User(email=email, password=hashed_password)
+    db.session.commit()
+
+    return jsonify({
+        "id": new_user.id,
+        "email": new_user.email,
+    })
+
 
 
 
@@ -20,31 +46,6 @@ def to_slug(name):
     slug = re.sub(r'\s+', '-', slug)
     slug = re.sub(r'[^a-z0-9\-]', '', slug)
     return slug
-
-
-
-# logic for authentication
-@app.route('/api/login', methods=['POST'])
-def login():
-    data = request.json
-    user_id = data.get('user_id')
-    email = data.get('email')
-    password = data.get('password')
-
-    user = get_user_by_email(email)
-    # searching json for an email specific person
-    # return dictionary or object
-    # error handle if no email
-
-    if user and check_password_hash(user['password'], password):
-        token = jwt.encode({
-            'user_id':user['id'],
-            'exp': datetime.datetime.utcnow() + datetime.timedelta(hours=1)
-        }, app.config['SECRET_KEY'], algorithm='HS256')
-
-        return jsonify({'token': token})
-    return jsonify({'message': 'Invalid credentials'}), 401
-
 
 @app.route('/api/colour', methods=['POST'])
 def add_colour():
